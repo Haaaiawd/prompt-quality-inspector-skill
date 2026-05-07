@@ -20,7 +20,10 @@ Design goal: make prompt quality measurable, repeatable, and iteratively improva
 - You want an offline/on-prem, security-heavy system prompt that includes requirements + engineering constraints.
 
 ## Output contract (pseudo UI)
-Always start with a “console panel” that includes two tabs: **SCORE** and **OPTIMIZE**.
+Always start with one unified "console panel" that uses two logical sections: **SCORE** and **OPTIMIZE**.
+- In `score-only` mode, keep `OPTIMIZE` as a collapsed placeholder (for example: "OPTIMIZE disabled by user mode"), instead of rendering full optimization content.
+- In `optimize-only` mode, render a compact diagnosis summary in `SCORE` first, then continue in `OPTIMIZE`.
+- In `score + optimize` mode (default), render both sections fully.
 
 ## Terminal dashboard output spec (Futuristic Console Edition)
 Style target: future-modern, high-contrast, operator-console feel.
@@ -180,8 +183,8 @@ Scoring principles:
 ## Workflow (Score + Optimize)
 
 ### Step 0: Detect user intent
-- If user wants score-only: output SCORE panel + verdict + minimal actions.
-- If user wants optimize: show diagnosis summary, then clarification.
+- If user wants score-only: output full SCORE + verdict + minimal actions, and keep OPTIMIZE as a collapsed placeholder.
+- If user wants optimize: show a compact SCORE diagnosis summary first, then run full clarification in OPTIMIZE.
 - If unclear: default to **score + optimize**.
 
 ### Step 1: Structured extraction
