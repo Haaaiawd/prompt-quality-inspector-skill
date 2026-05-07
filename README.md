@@ -57,15 +57,8 @@ Industrial prompt diagnostics & rewrite for **project-building prompts**.
 推荐：
 
 ```bash
-npx skills add <owner/repo>
+npx skills add Haaaiawd/prompt-quality-inspector-skill
 ```
-
-可选（如果你用 GitHub CLI 的 skills 管理能力）：
-
-```bash
-gh skills install <owner/repo> prompt-quality-inspector
-```
-
 ### 使用 <a id="zh-usage"></a>
 
 把你的提示词/PRD 草稿直接贴给 agent，然后说：
@@ -178,15 +171,8 @@ skills/
 ### Install <a id="en-install"></a>
 
 ```bash
-npx skills add <owner/repo>
+npx skills add Haaaiawd/prompt-quality-inspector-skill
 ```
-
-Optional:
-
-```bash
-gh skills install <owner/repo> prompt-quality-inspector
-```
-
 ### Usage <a id="en-usage"></a>
 
 Paste your prompt/spec, then ask for:
